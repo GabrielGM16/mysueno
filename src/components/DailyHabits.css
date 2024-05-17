@@ -1,0 +1,64 @@
+/* src/components/DailyHabits.css */
+
+.daily-habits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  .daily-habits h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .daily-habits input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .daily-habits button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .daily-habits button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsivo para dispositivos móviles */
+  @media (max-width: 600px) {
+    .daily-habits {
+      padding: 15px;
+    }
+  
+    .daily-habits h2 {
+      font-size: 1.5rem;
+    }
+  
+    .daily-habits input {
+      padding: 8px;
+      font-size: 0.9rem;
+    }
+  
+    .daily-habits button {
+      padding: 8px 15px;
+      font-size: 0.9rem;
+    }
+  }
+  
