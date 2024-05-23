@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+#Equipo 1 Gabriel, Franciso
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Requerimientos Técnicos del Proyecto [MySueno]
 
-## Available Scripts
+Este documento detalla los requerimientos técnicos necesarios para el proyecto MySueno, asegurando un entorno seguro y de alto rendimiento para el alojamiento del sitio web.
 
-In the project directory, you can run:
+## Sistema Operativo
+- Se requiere un servidor Linux, como Ubuntu Server, LinuxMint o Debian, debido a su amplia compatibilidad con tecnologías web modernas.
 
-### `npm start`
+## Servidor Web
+- Se debe instalar y configurar un servidor web, como Apache o Nginx, para servir las páginas web de manera eficiente y altamente configurable.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Firewall
+- Es imprescindible implementar medidas de seguridad, como un cortafuegos (firewall), para proteger el servidor contra posibles ataques. Además, se deben configurar adecuadamente los permisos de archivos y directorios.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Protocolo HTTPS
+- Se debe utilizar el protocolo HTTPS para todas las comunicaciones entre el navegador del usuario y el servidor, asegurando que los datos transmitidos estén cifrados y protegidos contra posibles ataques.
 
-### `npm test`
+## Protocolos del Servidor
+### Servidor Node.js (Express)
+- Configurar Nginx como proxy inverso para redirigir el tráfico desde el puerto 80 (HTTP) o 443 (HTTPS) al puerto en el que está ejecutando Node.js.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Servidor Nginx
+- Puerto 80: Para tráfico HTTP.
+- Puerto 443: Para tráfico HTTPS.
 
-### `npm run build`
+## MySQL
+- Utilizar el puerto 3306, el puerto por defecto para MySQL.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Certificado SSL/TLS
+- Implementar un certificado SSL/TLS válido para garantizar la autenticidad del servidor y la privacidad de los datos transmitidos.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## VPN
+- Se debe utilizar una red privada virtual (VPN) para garantizar una conexión segura entre el servidor y los usuarios finales, especialmente en ubicaciones remotas o no seguras.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Velocidad de Red
+- Se requiere una conexión a Internet de alta velocidad, con al menos 20 Mbps simétricos, para garantizar tiempos de carga rápidos y una experiencia de usuario fluida.
 
-### `npm run eject`
+## Compatibilidad con Navegadores
+- Asegurar que el sitio sea compatible con los navegadores web más populares, como Chrome, Firefox, Safari y Edge, para proporcionar una experiencia consistente para todos los usuarios.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Escalabilidad
+- El sitio debe tener la capacidad de crecer y adaptarse a medida que aumenta el tráfico y se agregan nuevas funcionalidades, considerando al menos 10 GB de almacenamiento.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Actualizaciones de Seguridad
+- Es crucial mantener actualizado el software del servidor y aplicar parches de seguridad regularmente para protegerlo contra vulnerabilidades.
