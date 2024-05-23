@@ -1,4 +1,4 @@
-#Equipo 1 Gabriel, Franciso
+# Equipo 1 Gabriel, Franciso
 
 # Requerimientos Técnicos del Proyecto [MySueno]
 
