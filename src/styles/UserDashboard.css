@@ -92,6 +92,7 @@
   margin: 20px;
   width: 80%; /* Aumenta el tamaño de las gráficas */
   max-width: 1200px; /* Ajusta el tamaño máximo de las gráficas */
+  overflow-x: auto; /* Permite el desplazamiento horizontal */
 }
 
 .chart-container h3 {
@@ -125,4 +126,69 @@
   margin-bottom: 10px;
   font-size: 16px;
   color: #ff6347; /* Color del texto de las recomendaciones */
+}
+
+/* Media queries para responsividad */
+
+@media (max-width: 768px) {
+  .dashboard-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dashboard-header .search-bar {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .dashboard-options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dashboard-option button {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  .chart-container {
+    width: 90%;
+    margin: 10px 0;
+    padding: 15px;
+  }
+
+  .recom {
+    width: 80%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header .container {
+    padding: 0 10px;
+  }
+
+  .dashboard-header .logo h1 {
+    font-size: 20px;
+  }
+
+  .dashboard-options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dashboard-option button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .chart-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .recom {
+    width: 100%;
+    max-width: none;
+  }
 }

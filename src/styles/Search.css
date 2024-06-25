@@ -64,3 +64,29 @@
   background: rgba(0, 206, 209, 0.5); /* Neon blue background on hover */
   border-left: 4px solid #00CED1; /* Highlight effect on hover */
 }
+
+/* Media queries para responsividad */
+
+@media (max-width: 768px) {
+  .global-search input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .search-results li {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .global-search input {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .search-results li {
+    padding: 6px;
+    font-size: 12px;
+  }
+}

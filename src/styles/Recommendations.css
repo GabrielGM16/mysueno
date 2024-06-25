@@ -73,3 +73,39 @@
   background-color: rgba(255, 255, 255, 0.2);
   color: #0c0c0c; /* Texto claro */
 }
+
+/* Media queries para responsividad */
+
+@media (max-width: 768px) {
+  .recommendations-content {
+    width: 90%;
+  }
+
+  .recommendations h2 {
+    font-size: 20px;
+  }
+
+  .recommendations li {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .recommendations-content {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .recommendations h2 {
+    font-size: 18px;
+  }
+
+  .recommendations li {
+    width: 100%;
+  }
+
+  .recommendations select {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

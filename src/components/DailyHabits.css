@@ -61,3 +61,47 @@
   font-weight: bold;
   font-size: 18px;
 }
+
+/* Media queries para responsividad */
+
+@media (max-width: 768px) {
+  .daily-habits input, 
+  .daily-habits select {
+    width: 90%;
+    max-width: none; /* Elimina el ancho máximo */
+  }
+
+  .daily-habits h2 {
+    font-size: 20px; /* Ajusta el tamaño de la fuente */
+  }
+
+  .daily-habits button {
+    font-size: 14px; /* Ajusta el tamaño de la fuente del botón */
+    padding: 8px 16px; /* Ajusta el padding del botón */
+  }
+
+  .confirmation {
+    font-size: 16px; /* Ajusta el tamaño de la fuente de confirmación */
+  }
+}
+
+@media (max-width: 480px) {
+  .daily-habits input, 
+  .daily-habits select {
+    width: 100%;
+    max-width: none; /* Elimina el ancho máximo */
+  }
+
+  .daily-habits h2 {
+    font-size: 18px; /* Ajusta el tamaño de la fuente */
+  }
+
+  .daily-habits button {
+    font-size: 12px; /* Ajusta el tamaño de la fuente del botón */
+    padding: 6px 12px; /* Ajusta el padding del botón */
+  }
+
+  .confirmation {
+    font-size: 14px; /* Ajusta el tamaño de la fuente de confirmación */
+  }
+}

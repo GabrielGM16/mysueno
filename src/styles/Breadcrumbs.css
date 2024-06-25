@@ -10,6 +10,7 @@
   padding: 10px 15px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.2); /* Sombra neón */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas */
 }
 
 .breadcrumbs a {
@@ -27,4 +28,36 @@
 .breadcrumbs span {
   color: #f0f8ff; /* Texto claro */
   font-weight: bold; /* Texto en negrita */
+}
+
+/* Media queries para responsividad */
+
+@media (max-width: 768px) {
+  .breadcrumbs {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .breadcrumbs a {
+    font-size: 12px;
+  }
+
+  .breadcrumbs span {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .breadcrumbs {
+    font-size: 10px;
+    padding: 5px 8px;
+  }
+
+  .breadcrumbs a {
+    font-size: 10px;
+  }
+
+  .breadcrumbs span {
+    font-size: 10px;
+  }
 }

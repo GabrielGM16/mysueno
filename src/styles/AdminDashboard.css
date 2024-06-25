@@ -92,3 +92,47 @@
   background-color: #39ff14; /* Botón neón verde al pasar el ratón */
   box-shadow: 0 0 10px #39ff14; /* Sombra neón verde */
 }
+
+/* Media queries para responsividad */
+
+@media (max-width: 768px) {
+  .dashboard-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dashboard-header .search-bar {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .dashboard-options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dashboard-option button {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header .container {
+    padding: 0 10px;
+  }
+
+  .dashboard-header .logo h1 {
+    font-size: 20px;
+  }
+
+  .dashboard-options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dashboard-option button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

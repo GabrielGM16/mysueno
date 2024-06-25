@@ -74,3 +74,40 @@
   background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente */
   color: #f0f8ff; /* Texto claro */
 }
+
+/* Media queries para responsividad */
+
+@media (max-width: 768px) {
+  .specialist-appointments li {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .specialist-appointments {
+    padding: 10px;
+  }
+
+  .specialist-appointments h2 {
+    font-size: 20px;
+  }
+
+  .specialist-appointments li {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .specialist-appointments li p {
+    font-size: 14px;
+  }
+
+  .specialist-appointments li button {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  .specialist-appointments textarea {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
