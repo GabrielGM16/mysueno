@@ -16,7 +16,7 @@ function DailyHabits() {
       const userId = localStorage.getItem('userId');
       const token = localStorage.getItem('token');
       try {
-        const response = await axios.get(`http://localhost:5000/api/user/profile/${userId}`, {
+        const response = await axios.get(`https://back-end-sueno.onrender.com/api/user/profile/${userId}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -34,7 +34,7 @@ function DailyHabits() {
     const userId = localStorage.getItem('userId');
     const token = localStorage.getItem('token');
     try {
-      await axios.post('http://localhost:5000/api/habits', {
+      await axios.post('https://back-end-sueno.onrender.com/api/habits', {
         userId,
         sleepDuration,
         mealTimes: mealTimes.split(','),

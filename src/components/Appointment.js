@@ -18,7 +18,7 @@ function Appointment() {
       const userId = localStorage.getItem('userId');
       const token = localStorage.getItem('token');
       try {
-        const response = await axios.get(`http://localhost:5000/api/user/profile/${userId}`, {
+        const response = await axios.get(`https://back-end-sueno.onrender.com/api/user/profile/${userId}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -32,7 +32,7 @@ function Appointment() {
     const fetchSpecialties = async () => {
       const token = localStorage.getItem('token');
       try {
-        const response = await axios.get('http://localhost:5000/api/specialists/specialties', {
+        const response = await axios.get('https://back-end-sueno.onrender.com/api/specialists/specialties', {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -51,7 +51,7 @@ function Appointment() {
     setSelectedSpecialty(e.target.value);
     const token = localStorage.getItem('token');
     try {
-      const response = await axios.get(`http://localhost:5000/api/specialists/${e.target.value}`, {
+      const response = await axios.get(`https://back-end-sueno.onrender.com/api/specialists/${e.target.value}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -67,7 +67,7 @@ function Appointment() {
     const userId = localStorage.getItem('userId');
     const token = localStorage.getItem('token');
     try {
-      await axios.post('http://localhost:5000/api/appointments', {
+      await axios.post('https://back-end-sueno.onrender.com/api/appointments', {
         userId,
         specialistId: selectedSpecialist,
         date,

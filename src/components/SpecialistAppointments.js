@@ -15,7 +15,7 @@ function SpecialistAppointments() {
       const userId = localStorage.getItem('userId');
       const token = localStorage.getItem('token');
       try {
-        const response = await axios.get(`http://localhost:5000/api/user/profile/${userId}`, {
+        const response = await axios.get(`https://back-end-sueno.onrender.com/api/user/profile/${userId}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -31,7 +31,7 @@ function SpecialistAppointments() {
       const specialistId = localStorage.getItem('userId');
       const token = localStorage.getItem('token');
       try {
-        const response = await axios.get(`http://localhost:5000/api/appointments/${specialistId}/appointments`, {
+        const response = await axios.get(`https://back-end-sueno.onrender.com/api/appointments/${specialistId}/appointments`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -49,7 +49,7 @@ function SpecialistAppointments() {
   const handleAttend = async (appointmentId) => {
     const token = localStorage.getItem('token');
     try {
-      await axios.patch(`http://localhost:5000/api/appointments/${appointmentId}/attend`, {
+      await axios.patch(`https://back-end-sueno.onrender.com/api/appointments/${appointmentId}/attend`, {
         summary,
         specialty // Include specialty in the request
       }, {

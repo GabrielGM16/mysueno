@@ -45,7 +45,7 @@ const UserDashboard = () => {
       const userId = localStorage.getItem('userId');
       const token = localStorage.getItem('token');
       try {
-        const response = await axios.get(`http://localhost:5000/api/habits/user/${userId}`, {
+        const response = await axios.get(`https://back-end-sueno.onrender.com/api/habits/user/${userId}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -60,7 +60,7 @@ const UserDashboard = () => {
       const userId = localStorage.getItem('userId');
       const token = localStorage.getItem('token');
       try {
-        const response = await axios.get(`http://localhost:5000/api/habits/recommendations/${userId}`, {
+        const response = await axios.get(`https://back-end-sueno.onrender.com/api/habits/recommendations/${userId}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
