@@ -9,6 +9,7 @@
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.2); /* Sombra neón */
   max-width: 600px;
+  width: 90%; /* Asegura que el contenedor no sea demasiado ancho en pantallas pequeñas */
   margin: 50px auto;
   color: #f0f8ff; /* Color del texto claro */
   border: 2px solid; /* Borde para la transición de colores */
@@ -52,4 +53,45 @@
 .logout-button:hover {
   background-color: #39ff14; /* Botón neón verde al pasar el ratón */
   box-shadow: 0 0 10px #39ff14; /* Sombra neón verde */
+}
+
+/* Media queries para responsividad */
+
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 15px;
+  }
+
+  .profile-details {
+    padding: 15px;
+  }
+
+  .profile-details p {
+    font-size: 16px;
+  }
+
+  .logout-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-container {
+    padding: 10px;
+    margin: 30px auto;
+  }
+
+  .profile-details {
+    padding: 10px;
+  }
+
+  .profile-details p {
+    font-size: 14px;
+  }
+
+  .logout-button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
 }

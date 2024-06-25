@@ -27,6 +27,19 @@
   color: #39ff14; /* Texto neón verde */
 }
 
+.header .nav {
+  position: relative;
+}
+
+.header .nav .menu-toggle {
+  display: none; /* Oculto por defecto */
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #00ced1; /* Color neón azul */
+  cursor: pointer;
+}
+
 .header .nav ul {
   list-style-type: none;
   padding: 0;
@@ -48,4 +61,52 @@
 .header .nav ul li a:hover {
   color: #39ff14; /* Texto neón verde al pasar el ratón */
   box-shadow: 0 0 10px #39ff14; /* Sombra neón verde */
+}
+
+/* Media queries para responsividad */
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header .nav .menu-toggle {
+    display: block; /* Mostrar botón hamburguesa */
+  }
+
+  .header .nav ul {
+    flex-direction: column;
+    width: 100%;
+    display: none; /* Ocultar menú por defecto */
+  }
+
+  .header .nav ul.open {
+    display: flex; /* Mostrar menú cuando se haga clic en el botón */
+  }
+
+  .header .nav ul li {
+    display: block;
+    width: 100%;
+  }
+
+  .header .nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .header .logo img {
+    height: 40px; /* Ajusta el tamaño del logo para pantallas más pequeñas */
+  }
+
+  .header .nav ul {
+    gap: 10px;
+  }
+
+  .header .nav ul li a {
+    padding: 8px 0;
+  }
 }

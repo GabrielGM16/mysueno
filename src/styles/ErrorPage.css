@@ -50,3 +50,35 @@
   background-color: #39ff14; /* Botón neón verde al pasar el ratón */
   box-shadow: 0 0 10px #39ff14; /* Sombra neón verde */
 }
+
+/* Media queries para responsividad */
+
+@media (max-width: 768px) {
+  .error-page h1 {
+    font-size: 2.5rem;
+  }
+
+  .error-page p {
+    font-size: 1.25rem;
+  }
+
+  .error-page button {
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-page h1 {
+    font-size: 2rem;
+  }
+
+  .error-page p {
+    font-size: 1rem;
+  }
+
+  .error-page button {
+    font-size: 0.75rem;
+    padding: 0.5rem;
+  }
+}

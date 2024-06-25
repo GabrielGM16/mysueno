@@ -60,6 +60,66 @@
   margin-bottom: 10px;
 }
 
+/* Media queries para responsividad */
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 15px;
+  }
+
+  .hero h1 {
+    font-size: 2.5em;
+  }
+
+  .hero p {
+    font-size: 1.2em;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+  .content-section h2 {
+    font-size: 1.8em;
+  }
+
+  .content-section p,
+  .content-section ul {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 30px 10px;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  .content-section h2 {
+    font-size: 1.5em;
+  }
+
+  .content-section p,
+  .content-section ul {
+    font-size: 0.9em;
+  }
+
+  .content-section ul {
+    padding-left: 15px;
+  }
+}
+
 /* Importamos los estilos de header y footer para asegurar consistencia */
 @import url('./Header.css');
 @import url('./Footer.css');

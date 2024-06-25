@@ -11,12 +11,16 @@
 .main-content {
   flex: 1;
   padding-top: 70px; /* Para evitar que el contenido se superponga con el header */
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
 }
 
 .banner {
   position: relative;
   text-align: center;
   color: #000000; /* Texto neón verde */
+  margin-bottom: 20px; /* Añade espacio debajo del banner */
 }
 
 .banner-image {
@@ -63,6 +67,40 @@
 .carousel .slide img {
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.2); /* Sombra neón */
+}
+
+/* Media queries para responsividad */
+
+@media (max-width: 768px) {
+  .banner-content {
+    width: 80%;
+    padding: 15px;
+  }
+
+  .cta-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .carousel-container {
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-content {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .cta-button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .carousel-container {
+    margin: 10px 0;
+  }
 }
 
 @import url('./SiteMap.css');

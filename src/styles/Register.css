@@ -5,7 +5,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center; /* Centra el contenido verticalmente */
   align-items: center;
   background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
   color: #f0f8ff; /* Color del texto claro */
@@ -17,7 +17,8 @@
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.2); /* Sombra neón */
   max-width: 400px;
-  margin: 40px auto;
+  width: 90%; /* Asegura que el contenedor no sea demasiado ancho en pantallas pequeñas */
+  margin: 20px;
   text-align: center;
   border: 2px solid; /* Borde para la transición de colores */
   border-image: linear-gradient(to left, #00ced1, #39ff14) 1; /* Gradiente de borde */
@@ -68,6 +69,48 @@
 .register-page .header,
 .register-page .footer {
   width: 100%;
+}
+
+/* Media queries para responsividad */
+
+@media (max-width: 768px) {
+  .register-container {
+    padding: 20px;
+  }
+
+  .register-container h2 {
+    font-size: 1.5em;
+  }
+
+  .register-container input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .register-container button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-container {
+    padding: 15px;
+  }
+
+  .register-container h2 {
+    font-size: 1.2em;
+  }
+
+  .register-container input {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .register-container button {
+    font-size: 12px;
+    padding: 8px;
+  }
 }
 
 @import url('./Header.css');

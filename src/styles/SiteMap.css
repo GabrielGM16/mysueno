@@ -1,47 +1,94 @@
 /* SiteMap.css */
 
 .sitemap-container {
-    background: #111;
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 20px;
-    color: #fff;
+  background: #111;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.sitemap-container h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #39ff14; /* Verde neón */
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background: #222;
+  border: 2px solid #39ff14; /* Borde verde neón */
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1 1 30%; /* Ajusta el tamaño de las tarjetas */
+  text-align: center;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.card:hover {
+  background: #333;
+  transform: translateY(-10px);
+}
+
+.card a {
+  text-decoration: none;
+  color: #39ff14; /* Color del texto verde neón */
+  font-size: 1.2em;
+}
+
+.card a:hover {
+  color: #0ff; /* Color del texto cian neón */
+}
+
+/* Media queries para responsividad */
+
+@media (max-width: 768px) {
+  .sitemap-container {
+    padding: 15px;
   }
-  
+
   .sitemap-container h2 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    color: #39ff14; /* Verde neón */
+    font-size: 1.3em;
   }
-  
+
   .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
   }
-  
+
   .card {
-    background: #222;
-    border: 2px solid #39ff14; /* Borde verde neón */
-    border-radius: 8px;
-    padding: 20px;
-    flex: 1 1 30%; /* Ajusta el tamaño de las tarjetas */
-    text-align: center;
-    transition: transform 0.3s, background 0.3s;
+    padding: 15px;
+    flex: 1 1 45%; /* Ajusta el tamaño de las tarjetas para pantallas medianas */
   }
-  
-  .card:hover {
-    background: #333;
-    transform: translateY(-10px);
-  }
-  
+
   .card a {
-    text-decoration: none;
-    color: #39ff14; /* Color del texto verde neón */
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .sitemap-container {
+    padding: 10px;
+  }
+
+  .sitemap-container h2 {
     font-size: 1.2em;
   }
-  
-  .card a:hover {
-    color: #0ff; /* Color del texto cian neón */
+
+  .card-container {
+    gap: 10px;
   }
-  
+
+  .card {
+    padding: 10px;
+    flex: 1 1 100%; /* Ajusta el tamaño de las tarjetas para pantallas pequeñas */
+  }
+
+  .card a {
+    font-size: 1em;
+  }
+}

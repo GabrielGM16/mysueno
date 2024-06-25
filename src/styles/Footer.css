@@ -26,3 +26,33 @@
   text-decoration: underline;
   box-shadow: 0 0 10px #39ff14; /* Sombra neón verde */
 }
+
+/* Media queries para responsividad */
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px 0;
+  }
+
+  .footer p {
+    font-size: 14px;
+  }
+
+  .footer a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 10px 0;
+  }
+
+  .footer p {
+    font-size: 12px;
+  }
+
+  .footer a {
+    font-size: 12px;
+  }
+}
