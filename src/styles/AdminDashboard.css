@@ -1,0 +1,94 @@
+/* src/styles/AdminDashboard.css */
+
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que el dashboard ocupe toda la altura de la pantalla */
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  color: #f0f8ff; /* Color del texto claro */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.dashboard-header {
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  color: #39ff14; /* Texto neón verde */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2); /* Sombra neón */
+}
+
+.dashboard-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Asegura que el contenido se extienda al ancho completo */
+  box-sizing: border-box;
+}
+
+.dashboard-header .logo {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-header .logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.dashboard-header .logo h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #39ff14; /* Texto neón verde */
+}
+
+.dashboard-header .search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-header .search-bar input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #0a0a0a;
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente */
+  color: #f0f8ff; /* Texto claro */
+  font-size: 16px;
+}
+
+.dashboard-header .search-bar input:focus {
+  border-color: #39ff14; /* Borde neón verde */
+  box-shadow: 0 0 10px #39ff14; /* Sombra neón verde */
+  outline: none;
+}
+
+.breadcrumbs {
+  margin: 20px 0;
+}
+
+.dashboard-options {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.dashboard-option button {
+  padding: 10px 20px;
+  background-color: #00ced1; /* Botón neón azul */
+  border: none;
+  border-radius: 5px;
+  color: #1e1e1e;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-option button:hover {
+  background-color: #39ff14; /* Botón neón verde al pasar el ratón */
+  box-shadow: 0 0 10px #39ff14; /* Sombra neón verde */
+}

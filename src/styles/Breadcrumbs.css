@@ -1,0 +1,30 @@
+/* Breadcrumbs.css */
+
+.breadcrumbs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2); /* Sombra neón */
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #00ced1; /* Texto neón azul */
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Transición suave */
+}
+
+.breadcrumbs a:hover {
+  color: #39ff14; /* Texto neón verde al pasar el ratón */
+  text-shadow: 0 0 5px #39ff14; /* Sombra neón verde */
+  text-decoration: underline;
+}
+
+.breadcrumbs span {
+  color: #f0f8ff; /* Texto claro */
+  font-weight: bold; /* Texto en negrita */
+}

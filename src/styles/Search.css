@@ -1,0 +1,66 @@
+/* GlobalSearch.css */
+
+.global-search {
+  position: relative;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif; /* Modern font */
+}
+
+.global-search input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid rgba(0, 206, 209, 0.5); /* Light blue border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  color: #f0f8ff; /* Light text color */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for border color and shadow */
+}
+
+.global-search input:focus {
+  border-color: #00CED1; /* Darker chameleon blue on focus */
+  box-shadow: 0 0 10px rgba(0, 206, 209, 0.5); /* Neon shadow on focus */
+  outline: none;
+}
+
+.search-results {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  border: 1px solid #00CED1; /* Neon blue border */
+  border-radius: 5px; /* Rounded corners */
+  z-index: 1000;
+  max-height: 300px; /* Max height for better usability */
+  overflow-y: auto; /* Scrollable if content exceeds max height */
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth animation */
+  box-shadow: 0 4px 6px rgba(0, 255, 255, 0.2); /* Neon shadow */
+  list-style: none; /* Remove bullets from list items */
+  padding: 0; /* Remove default padding */
+}
+
+.global-search input:focus + .search-results,
+.search-results:hover {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.search-results li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, border-left 0.3s ease; /* Smooth transition for background color and border */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle bottom border for separation */
+  color: #f0f8ff; /* Light text color */
+}
+
+.search-results li:last-child {
+  border-bottom: none; /* Remove border from last item */
+}
+
+.search-results li:hover {
+  background: rgba(0, 206, 209, 0.5); /* Neon blue background on hover */
+  border-left: 4px solid #00CED1; /* Highlight effect on hover */
+}

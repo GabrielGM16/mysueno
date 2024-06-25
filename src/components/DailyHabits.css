@@ -1,64 +1,63 @@
-/* src/components/DailyHabits.css */
+/* DailyHabits.css */
 
 .daily-habits {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    margin: 0 auto;
-    max-width: 600px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    background-color: #fff;
-  }
-  
-  .daily-habits h2 {
-    margin-bottom: 20px;
-    font-size: 1.8rem;
-    color: #333;
-  }
-  
-  .daily-habits input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-  }
-  
-  .daily-habits button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .daily-habits button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Responsivo para dispositivos móviles */
-  @media (max-width: 600px) {
-    .daily-habits {
-      padding: 15px;
-    }
-  
-    .daily-habits h2 {
-      font-size: 1.5rem;
-    }
-  
-    .daily-habits input {
-      padding: 8px;
-      font-size: 0.9rem;
-    }
-  
-    .daily-habits button {
-      padding: 8px 15px;
-      font-size: 0.9rem;
-    }
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  color: #f0f8ff; /* Color del texto claro */
+  min-height: 100vh; /* Ocupa toda la pantalla */
+}
+
+.daily-habits h2 {
+  margin-bottom: 20px;
+  color: #39ff14; /* Texto neón verde */
+  font-size: 24px;
+}
+
+.daily-habits input, 
+.daily-habits select {
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente para los inputs */
+  color: #000000; /* Texto claro */
+  font-size: 16px;
+}
+
+.daily-habits input:focus, 
+.daily-habits select:focus {
+  border-color: #39ff14; /* Borde neón verde */
+  box-shadow: 0 0 10px #39ff14; /* Sombra neón verde */
+  outline: none;
+}
+
+.daily-habits button {
+  padding: 10px 20px;
+  background-color: #00ced1; /* Botón neón azul */
+  color: #1e1e1e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.daily-habits button:hover {
+  background-color: #39ff14; /* Botón neón verde al pasar el ratón */
+  box-shadow: 0 0 10px #39ff14; /* Sombra neón verde */
+}
+
+.confirmation {
+  margin-top: 20px;
+  color: #39ff14; /* Texto neón verde para confirmación */
+  font-weight: bold;
+  font-size: 18px;
+}

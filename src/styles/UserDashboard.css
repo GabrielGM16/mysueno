@@ -1,0 +1,128 @@
+/* src/styles/UserDashboard.css */
+
+.user-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  color: #f0f8ff; /* Color del texto claro */
+  padding: 20px;
+}
+
+.dashboard-header {
+  background-color: #4CAF50;
+  color: rgb(17, 17, 17);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.dashboard-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-header .logo {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-header .logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.dashboard-header .logo h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.dashboard-header .search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-header .search-bar input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #0a0a0a;
+}
+
+.breadcrumbs {
+  margin: 80px 0 20px; /* Asegura que no se superponga con el header fijo */
+}
+
+.dashboard-options {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
+
+.dashboard-option button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: rgb(5, 5, 5);
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-option button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 0 10px #0056b3; /* Sombra neón azul */
+}
+
+.chart-container {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2); /* Sombra neón */
+  border-radius: 8px;
+  margin: 20px;
+  width: 80%; /* Aumenta el tamaño de las gráficas */
+  max-width: 1200px; /* Ajusta el tamaño máximo de las gráficas */
+}
+
+.chart-container h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #39ff14; /* Texto neón verde */
+}
+
+.recom {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente */
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2); /* Sombra neón roja */
+  border-radius: 8px;
+  margin: 10px;
+  width: 30%; /* Ajusta el tamaño del contenedor de recomendaciones */
+  max-width: 300px; /* Ajusta el tamaño máximo del contenedor de recomendaciones */
+}
+
+.recom h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #ff4500; /* Texto neón naranja */
+}
+
+.recom ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.recom li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #ff6347; /* Color del texto de las recomendaciones */
+}

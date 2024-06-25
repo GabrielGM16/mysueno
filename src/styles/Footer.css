@@ -1,0 +1,28 @@
+/* src/styles/Footer.css */
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  color: #39ff14; /* Texto neón verde */
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2); /* Sombra neón */
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+.footer a {
+  color: #00ced1; /* Texto neón azul */
+  text-decoration: none;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer a:hover {
+  color: #39ff14; /* Texto neón verde al pasar el ratón */
+  text-decoration: underline;
+  box-shadow: 0 0 10px #39ff14; /* Sombra neón verde */
+}

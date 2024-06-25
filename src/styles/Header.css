@@ -1,0 +1,51 @@
+/* src/styles/Header.css */
+
+.header {
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  padding: 10px;
+  color: #39ff14; /* Texto neón verde */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Espacia el contenido entre los extremos */
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2); /* Sombra neón */
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+}
+
+.header .logo img {
+  height: 50px; /* Ajusta el tamaño del logo */
+  margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+.header .logo h1 {
+  margin: 0;
+  color: #39ff14; /* Texto neón verde */
+}
+
+.header .nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+}
+
+.header .nav ul li {
+  display: inline;
+}
+
+.header .nav ul li a {
+  color: #00ced1; /* Texto neón azul */
+  text-decoration: none;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header .nav ul li a:hover {
+  color: #39ff14; /* Texto neón verde al pasar el ratón */
+  box-shadow: 0 0 10px #39ff14; /* Sombra neón verde */
+}

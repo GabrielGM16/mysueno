@@ -1,0 +1,79 @@
+/* Appointment.css */
+
+.appointment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  color: #f0f8ff; /* Color del texto claro */
+  min-height: 100vh; /* Ocupa toda la pantalla */
+}
+
+.appointment h2 {
+  margin-bottom: 20px;
+  color: #39ff14; /* Texto neón verde */
+  font-size: 24px;
+}
+
+.appointment form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Asegura que el formulario ocupe el 100% del contenedor */
+}
+
+.appointment input, 
+.appointment select, 
+.appointment textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 80%; /* Ajusta el ancho de los inputs */
+  max-width: 400px; /* Ancho máximo */
+  border: 1px solid #39ff14; /* Borde neón verde */
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro para los inputs */
+  color: #39ff14; /* Texto neón verde */
+  font-size: 16px;
+}
+
+.appointment input::placeholder, 
+.appointment select::placeholder, 
+.appointment textarea::placeholder {
+  color: #f0f8ff; /* Placeholder claro */
+}
+
+.appointment input:focus, 
+.appointment select:focus, 
+.appointment textarea:focus {
+  border-color: #00ced1; /* Borde neón azul */
+  box-shadow: 0 0 10px #00ced1; /* Sombra neón azul */
+  outline: none;
+}
+
+.appointment button {
+  padding: 10px 20px;
+  background-color: #00ced1; /* Botón neón azul */
+  color: #1e1e1e; /* Texto oscuro */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.appointment button:hover {
+  background-color: #39ff14; /* Botón neón verde al pasar el ratón */
+  box-shadow: 0 0 10px #39ff14; /* Sombra neón verde */
+}
+
+.confirmation {
+  margin-top: 20px;
+  color: #39ff14; /* Texto neón verde para confirmación */
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center; /* Centra el texto de confirmación */
+}

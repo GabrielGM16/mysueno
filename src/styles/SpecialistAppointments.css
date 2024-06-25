@@ -1,0 +1,76 @@
+/* SpecialistAppointments.css */
+
+.specialist-appointments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2); /* Sombra neón */
+  color: #f0f8ff; /* Color del texto claro */
+  min-height: 100vh; /* Ocupa toda la pantalla */
+  border: 2px solid; /* Borde para la transición de colores */
+  border-image: linear-gradient(to left, #00ced1, #39ff14) 1; /* Gradiente de borde */
+}
+
+.specialist-appointments h2 {
+  margin-bottom: 20px;
+  color: #39ff14; /* Texto neón verde */
+  font-size: 24px;
+}
+
+.specialist-appointments ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+.specialist-appointments li {
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 300px; /* Ajusta el ancho de las tarjetas */
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2); /* Sombra neón */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.specialist-appointments li p {
+  margin: 5px 0;
+  color: #f0f8ff; /* Texto claro */
+}
+
+.specialist-appointments li button {
+  padding: 5px 10px;
+  background-color: #00ced1; /* Botón neón azul */
+  color: #1e1e1e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.specialist-appointments li button:hover {
+  background-color: #39ff14; /* Botón neón verde al pasar el ratón */
+  box-shadow: 0 0 10px #39ff14; /* Sombra neón verde */
+}
+
+.specialist-appointments textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: none;
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente */
+  color: #f0f8ff; /* Texto claro */
+}

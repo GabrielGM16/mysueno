@@ -1,0 +1,148 @@
+/* src/styles/SpecialistDashboard.css */
+
+.specialist-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh; /* Asegura que el dashboard ocupe toda la altura de la pantalla */
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  color: #f0f8ff; /* Color del texto claro */
+  padding: 20px;
+}
+
+.dashboard-header {
+  background-color: #4CAF50;
+  color: rgb(17, 17, 17);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.dashboard-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-header .logo {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-header .logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.dashboard-header .logo h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.dashboard-header .search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-header .search-bar input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #0a0a0a;
+}
+
+.breadcrumbs {
+  margin: 80px 0 20px; /* Asegura que no se superponga con el header fijo */
+}
+
+.dashboard-options {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
+
+.dashboard-option button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: rgb(5, 5, 5);
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-option button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 0 10px #0056b3; /* Sombra neón azul */
+}
+
+.pending-appointments {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.pending-appointments h3 {
+  margin-bottom: 10px;
+  color: #39ff14; /* Texto neón verde */
+}
+
+.pending-appointments ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.pending-appointments li {
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 300px; /* Ajusta el ancho de las tarjetas */
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2); /* Sombra neón */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pending-appointments li p {
+  margin: 5px 0;
+  color: #f0f8ff; /* Texto claro */
+}
+
+.pending-appointments li button {
+  padding: 5px 10px;
+  background-color: #00ced1; /* Botón neón azul */
+  color: #1e1e1e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pending-appointments li button:hover {
+  background-color: #39ff14; /* Botón neón verde al pasar el ratón */
+  box-shadow: 0 0 10px #39ff14; /* Sombra neón verde */
+}
+
+.pending-appointments textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: none;
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente */
+  color: #f0f8ff; /* Texto claro */
+}

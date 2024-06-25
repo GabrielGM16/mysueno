@@ -1,0 +1,68 @@
+/* src/styles/Home.css */
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  color: #f0f8ff; /* Color del texto claro */
+}
+
+.main-content {
+  flex: 1;
+  padding-top: 70px; /* Para evitar que el contenido se superponga con el header */
+}
+
+.banner {
+  position: relative;
+  text-align: center;
+  color: #000000; /* Texto neón verde */
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2); /* Sombra neón */
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent; /* Contenedor totalmente transparente */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #00ced1; /* Botón neón azul */
+  border: none;
+  padding: 10px 20px;
+  color: #1e1e1e;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 25px; /* Bordes redondeados */
+  font-weight: bold; /* Letras resaltadas */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #39ff14; /* Botón neón verde al pasar el ratón */
+  box-shadow: 0 0 10px #39ff14; /* Sombra neón verde */
+}
+
+.carousel-container {
+  margin: 20px 0;
+}
+
+.carousel .slide img {
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2); /* Sombra neón */
+}
+
+@import url('./SiteMap.css');

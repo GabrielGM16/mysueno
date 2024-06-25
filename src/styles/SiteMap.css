@@ -1,0 +1,47 @@
+/* SiteMap.css */
+
+.sitemap-container {
+    background: #111;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    color: #fff;
+  }
+  
+  .sitemap-container h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #39ff14; /* Verde neón */
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .card {
+    background: #222;
+    border: 2px solid #39ff14; /* Borde verde neón */
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1 1 30%; /* Ajusta el tamaño de las tarjetas */
+    text-align: center;
+    transition: transform 0.3s, background 0.3s;
+  }
+  
+  .card:hover {
+    background: #333;
+    transform: translateY(-10px);
+  }
+  
+  .card a {
+    text-decoration: none;
+    color: #39ff14; /* Color del texto verde neón */
+    font-size: 1.2em;
+  }
+  
+  .card a:hover {
+    color: #0ff; /* Color del texto cian neón */
+  }
+  

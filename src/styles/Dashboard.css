@@ -1,0 +1,22 @@
+/* src/styles/Dashboard.css */
+
+.dashboard-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+  }
+  
+  .dashboard-container h2 {
+    color: #343a40;
+    margin-bottom: 25px;
+  }
+  
+  .dashboard-container p {
+    color: #6c757d;
+    font-size: 18px;
+  }
+  
