@@ -112,6 +112,15 @@
     padding: 8px;
   }
 }
+/* src/styles/Login.css */
+
+.login-page .error {
+  color: #ff4500; /* Color rojo para errores */
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 
 @import url('./Header.css');
 @import url('./Footer.css');
