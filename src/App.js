@@ -17,11 +17,12 @@ import InactivityHandler from './components/InactivityHandler';
 import ErrorPage from './components/ErrorPage';
 import { NavigationProvider } from './context/NavigationContext';
 import AxiosInterceptorSetup from './components/AxiosInterceptorSetup';
-import About from './components/About'; // Importa el nuevo componente About
+import About from './components/About';
 import Contact from './components/Contact';
 import VerifyAccount from './components/VerifyAccount';
 import ForgotPassword from './components/ForgotPassword';
 import ResetPassword from './components/ResetPassword';
+import AuthenticatedRoute from './components/AuthenticatedRoute';
 
 const App = () => {
   return (
@@ -31,19 +32,19 @@ const App = () => {
         <InactivityHandler>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} /> {/* Nueva ruta */}
-            <Route path="/appointment" element={<Appointment />} />
-            <Route path="/daily-habits" element={<DailyHabits />} />
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/appointment" element={<AuthenticatedRoute component={Appointment} />} />
+            <Route path="/daily-habits" element={<AuthenticatedRoute component={DailyHabits} />} />
+            <Route path="/dashboard" element={<AuthenticatedRoute component={Dashboard} />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/recommendations" element={<Recommendations />} />
+            <Route path="/profile" element={<AuthenticatedRoute component={Profile} />} />
+            <Route path="/recommendations" element={<AuthenticatedRoute component={Recommendations} />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/summary" element={<Summary />} />
-            <Route path="/user-dashboard" element={<UserDashboard />} />
-            <Route path="/admin-dashboard" element={<AdminDashboard />} />
-            <Route path="/specialist-dashboard" element={<SpecialistDashboard />} />
-            <Route path="/specialist-appointments" element={<SpecialistAppointments />} />
+            <Route path="/summary" element={<AuthenticatedRoute component={Summary} />} />
+            <Route path="/user-dashboard" element={<AuthenticatedRoute component={UserDashboard} />} />
+            <Route path="/admin-dashboard" element={<AuthenticatedRoute component={AdminDashboard} />} />
+            <Route path="/specialist-dashboard" element={<AuthenticatedRoute component={SpecialistDashboard} />} />
+            <Route path="/specialist-appointments" element={<AuthenticatedRoute component={SpecialistAppointments} />} />
             <Route path="/error" element={<ErrorPage />} />
             <Route path="*" element={<ErrorPage />} />
             <Route path="/contact" element={<Contact />} />
