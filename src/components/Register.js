@@ -60,12 +60,12 @@ const Register = () => {
     }
 
     try {
-      await axios.post('https://back-end-sueno.onrender.com/api/auth/register', {
+      const response = await axios.post('https://back-end-sueno.onrender.com/api/auth/register', {
         ...formData,
         captchaToken
       });
       console.log('User registered with role:', formData.role); // Depuración
-      navigate('/login');
+      navigate('/verify', { state: { email: formData.email } });
     } catch (error) {
       console.error('Error registering user:', error.response.data); // Mostrar el mensaje de error del servidor
       setErrors({ server: error.response.data.message });

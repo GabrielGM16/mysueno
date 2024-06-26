@@ -19,6 +19,7 @@ import { NavigationProvider } from './context/NavigationContext';
 import AxiosInterceptorSetup from './components/AxiosInterceptorSetup';
 import About from './components/About'; // Importa el nuevo componente About
 import Contact from './components/Contact';
+import VerifyAccount from './components/VerifyAccount';
 
 const App = () => {
   return (
@@ -44,6 +45,7 @@ const App = () => {
             <Route path="/error" element={<ErrorPage />} />
             <Route path="*" element={<ErrorPage />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/verify" element={<VerifyAccount />} />
           </Routes>
         </InactivityHandler>
       </NavigationProvider>
