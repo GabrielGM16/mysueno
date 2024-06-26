@@ -20,6 +20,8 @@ import AxiosInterceptorSetup from './components/AxiosInterceptorSetup';
 import About from './components/About'; // Importa el nuevo componente About
 import Contact from './components/Contact';
 import VerifyAccount from './components/VerifyAccount';
+import ForgotPassword from './components/ForgotPassword';
+import ResetPassword from './components/ResetPassword';
 
 const App = () => {
   return (
@@ -46,6 +48,8 @@ const App = () => {
             <Route path="*" element={<ErrorPage />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/verify" element={<VerifyAccount />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/reset/:token" element={<ResetPassword />} />
           </Routes>
         </InactivityHandler>
       </NavigationProvider>

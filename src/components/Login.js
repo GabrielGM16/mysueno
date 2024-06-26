@@ -7,7 +7,7 @@ import '../styles/Login.css';
 
 const Login = () => {
   const [formData, setFormData] = useState({ email: '', password: '' });
-  const [error, setError] = useState(null);
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -20,14 +20,11 @@ const Login = () => {
       const response = await axios.post('https://back-end-sueno.onrender.com/api/auth/login', formData);
       const { token, role, userId } = response.data;
 
-      // Guardar el token y el ID del usuario en localStorage
       localStorage.setItem('token', token);
       localStorage.setItem('userId', userId);
 
-      // Depuración: Imprimir el rol recibido
       console.log('Role received in frontend:', role);
 
-      // Redirigir al dashboard correspondiente basado en el rol
       if (role === 'user') {
         navigate('/user-dashboard');
       } else if (role === 'admin') {
@@ -38,7 +35,6 @@ const Login = () => {
         console.error('Rol no reconocido:', role);
       }
     } catch (error) {
-      console.error('Error al iniciar sesión:', error);
       setError(error.response.data.message);
     }
   };
@@ -49,11 +45,28 @@ const Login = () => {
       <div className="login-container">
         <h2>Login</h2>
         <form onSubmit={handleSubmit}>
-          <input type="email" name="email" placeholder="Email" onChange={handleChange} required />
-          <input type="password" name="password" placeholder="Password" onChange={handleChange} required />
-          {error && <p className="error">{error}</p>}
+          <input 
+            type="email" 
+            name="email" 
+            placeholder="Email" 
+            onChange={handleChange} 
+            required 
+          />
+          <input 
+            type="password" 
+            name="password" 
+            placeholder="Password" 
+            onChange={handleChange} 
+            required 
+          />
           <button type="submit">Login</button>
         </form>
+        {error && (
+          <div className="error-message">
+            <p>{error}</p>
+            <Link to="/forgot-password">Forgot Password?</Link>
+          </div>
+        )}
         <p>
           Don't have an account? <Link to="/register">Register here</Link>
         </p>
