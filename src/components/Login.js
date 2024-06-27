@@ -8,6 +8,7 @@ import '../styles/Login.css';
 const Login = () => {
   const [formData, setFormData] = useState({ email: '', password: '', code: '' });
   const [step, setStep] = useState(1);
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -21,6 +22,7 @@ const Login = () => {
         await axios.post('https://back-end-sueno.onrender.com/api/auth/login', { email: formData.email, password: formData.password });
         setFormData({ ...formData, password: '' }); // Limpiar la contraseña después del primer paso
         setStep(2);
+        setError(''); // Limpiar errores si el login es exitoso
       } else if (step === 2) {
         const response = await axios.post('https://back-end-sueno.onrender.com/api/auth/verify-code', { email: formData.email, code: formData.code });
         const { token, role, userId } = response.data;
@@ -45,6 +47,11 @@ const Login = () => {
       }
     } catch (error) {
       console.error('Error al iniciar sesión:', error);
+      if (step === 1) {
+        setError('Invalid email or password. Forgot your password?');
+      } else if (step === 2) {
+        setError('Invalid verification code. Please try again.');
+      }
     }
   };
 
@@ -58,10 +65,17 @@ const Login = () => {
             <>
               <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
               <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} required />
+              {error && (
+                <div className="error">
+                  {error}
+                  <Link to="/forgot-password" className="forgot-password-link">Reset Password</Link>
+                </div>
+              )}
             </>
           ) : (
             <>
               <input type="text" name="code" placeholder="Verification Code" value={formData.code} onChange={handleChange} required />
+              {error && <div className="error">{error}</div>}
             </>
           )}
           <button type="submit">{step === 1 ? 'Next' : 'Login'}</button>
