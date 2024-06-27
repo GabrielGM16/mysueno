@@ -30,6 +30,7 @@ const Login = () => {
         // Guardar el token y el ID del usuario en localStorage
         localStorage.setItem('token', token);
         localStorage.setItem('userId', userId);
+        localStorage.setItem('role', role);
 
         // Depuración: Imprimir el rol recibido
         console.log('Role received in frontend:', role);
