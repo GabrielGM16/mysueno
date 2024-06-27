@@ -8,7 +8,7 @@ import '../styles/Login.css';
 const Login = () => {
   const [formData, setFormData] = useState({ email: '', password: '', code: '' });
   const [step, setStep] = useState(1);
-  const [error, setError] = useState('');
+  const [error, setError] = useState(null); // State for errors
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -17,25 +17,22 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError(null); // Clear previous errors
     try {
       if (step === 1) {
-        await axios.post('https://back-end-sueno.onrender.com/api/auth/login', { email: formData.email, password: formData.password });
-        setFormData({ ...formData, password: '' }); // Limpiar la contraseña después del primer paso
+        const response = await axios.post('https://back-end-sueno.onrender.com/api/auth/login', { email: formData.email, password: formData.password });
+        localStorage.setItem('email', formData.email); // Store email for the next step
+        setFormData({ ...formData, password: '' }); // Clear password after the first step
         setStep(2);
-        setError(''); // Limpiar errores si el login es exitoso
       } else if (step === 2) {
-        const response = await axios.post('https://back-end-sueno.onrender.com/api/auth/verify-code', { email: formData.email, code: formData.code });
+        const email = localStorage.getItem('email');
+        const response = await axios.post('https://back-end-sueno.onrender.com/api/auth/verify-code', { email, code: formData.code });
         const { token, role, userId } = response.data;
 
-        // Guardar el token y el ID del usuario en localStorage
         localStorage.setItem('token', token);
         localStorage.setItem('userId', userId);
-        localStorage.setItem('role', role);
 
-        // Depuración: Imprimir el rol recibido
-        console.log('Role received in frontend:', role);
-
-        // Redirigir al dashboard correspondiente basado en el rol
+        // Redirect to the appropriate dashboard based on role
         if (role === 'user') {
           navigate('/user-dashboard');
         } else if (role === 'admin') {
@@ -48,11 +45,7 @@ const Login = () => {
       }
     } catch (error) {
       console.error('Error al iniciar sesión:', error);
-      if (step === 1) {
-        setError('Invalid email or password. Forgot your password?');
-      } else if (step === 2) {
-        setError('Invalid verification code. Please try again.');
-      }
+      setError('Invalid email or password.'); // Set error message
     }
   };
 
@@ -66,21 +59,20 @@ const Login = () => {
             <>
               <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
               <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} required />
-              {error && (
-                <div className="error">
-                  {error}
-                  <Link to="/forgot-password" className="forgot-password-link">Reset Password</Link>
-                </div>
-              )}
             </>
           ) : (
             <>
               <input type="text" name="code" placeholder="Verification Code" value={formData.code} onChange={handleChange} required />
-              {error && <div className="error">{error}</div>}
             </>
           )}
-          <button type="submit">{step === 1 ? 'Next' : 'Login'}</button>
+          <button type="submit">{step === 1 ? 'Next' : 'Verify'}</button>
         </form>
+        {error && (
+          <div className="error-message">
+            <p>{error}</p>
+            <p><Link to="/forgot-password">Forgot your password?</Link></p>
+          </div>
+        )}
         {step === 1 && (
           <p>
             Don't have an account? <Link to="/register">Register here</Link>

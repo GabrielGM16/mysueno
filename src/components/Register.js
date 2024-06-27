@@ -65,7 +65,10 @@ const Register = () => {
         captchaToken
       });
       console.log('User registered with role:', formData.role); // Depuración
-      navigate('/verify', { state: { email: formData.email } });
+      localStorage.setItem('email', formData.email); // Almacenar email en localStorage
+      // Inside the handleSubmit function in the Register component
+navigate('/verify-account', { state: { email: formData.email } });
+// Redirigir a la página de verificación
     } catch (error) {
       console.error('Error registering user:', error.response.data); // Mostrar el mensaje de error del servidor
       setErrors({ server: error.response.data.message });

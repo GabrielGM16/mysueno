@@ -23,6 +23,7 @@ import VerifyAccount from './components/VerifyAccount';
 import ForgotPassword from './components/ForgotPassword';
 import ResetPassword from './components/ResetPassword';
 import ProtectedRoute from './components/ProtectedRoute';
+import VerifyLoginCode from './components/VerifyLoginCode';
 
 const App = () => {
   return (
@@ -35,9 +36,11 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/verify" element={<VerifyAccount />} />
+            <Route path="/verify-account" element={<VerifyAccount />} />
+            <Route path="/verify-login-code" element={<VerifyLoginCode />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route path="/reset/:token" element={<ResetPassword />} />
+            <Route path="/contact" element={<Contact />} />
 
             <Route element={<ProtectedRoute allowedRoles={['user', 'admin']} />}>
               <Route path="/appointment" element={<Appointment />} />
@@ -59,7 +62,6 @@ const App = () => {
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/summary" element={<Summary />} />
-              <Route path="/contact" element={<Contact />} />
             </Route>
 
             <Route path="*" element={<ErrorPage />} />

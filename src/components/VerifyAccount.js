@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import '../styles/VerifyAccount.css';
@@ -9,6 +9,14 @@ const VerifyAccount = () => {
   const [verificationCode, setVerificationCode] = useState('');
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+  const location = useLocation();
+  const email = location.state ? location.state.email : null;
+
+  useEffect(() => {
+    if (!email) {
+      navigate('/login'); // Redirect to login if email is not available
+    }
+  }, [email, navigate]);
 
   const handleChange = (e) => {
     setVerificationCode(e.target.value);
@@ -17,7 +25,7 @@ const VerifyAccount = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://back-end-sueno.onrender.com/api/auth/verify', { verificationCode });
+      const response = await axios.post('https://back-end-sueno.onrender.com/api/auth/verify-account', { email, code: verificationCode });
       if (response.data.message === 'Account verified successfully') {
         navigate('/login');
       } else {
