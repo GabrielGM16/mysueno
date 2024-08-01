@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: 'https://back-end-sueno.onrender.com/api',
+  baseURL: 'http://ec2-54-208-245-218.compute-1.amazonaws.com/api',
 });
 
 axiosInstance.interceptors.request.use((config) => {

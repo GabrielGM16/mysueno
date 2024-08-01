@@ -25,7 +25,7 @@ const VerifyAccount = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://back-end-sueno.onrender.com/api/auth/verify-account', { email, code: verificationCode });
+      const response = await axios.post('http://ec2-54-208-245-218.compute-1.amazonaws.com/api/auth/verify-account', { email, code: verificationCode });
       if (response.data.message === 'Account verified successfully') {
         navigate('/login');
       } else {

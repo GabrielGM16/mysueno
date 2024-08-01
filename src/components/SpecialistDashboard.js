@@ -25,7 +25,7 @@ const SpecialistDashboard = () => {
       const userId = localStorage.getItem('userId');
       const token = localStorage.getItem('token');
       try {
-        const response = await axios.get(`https://back-end-sueno.onrender.com/api/user/profile/${userId}`, {
+        const response = await axios.get(`http://ec2-54-208-245-218.compute-1.amazonaws.com/api/user/profile/${userId}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -40,7 +40,7 @@ const SpecialistDashboard = () => {
       const specialistId = localStorage.getItem('userId');
       const token = localStorage.getItem('token');
       try {
-        const response = await axios.get(`https://back-end-sueno.onrender.com/api/appointments/${specialistId}/appointments`, {
+        const response = await axios.get(`http://ec2-54-208-245-218.compute-1.amazonaws.com/api/appointments/${specialistId}/appointments`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -58,7 +58,7 @@ const SpecialistDashboard = () => {
   const handleAttend = async (appointmentId) => {
     const token = localStorage.getItem('token');
     try {
-      await axios.patch(`https://back-end-sueno.onrender.com/api/appointments/${appointmentId}/attend`, {
+      await axios.patch(`http://ec2-54-208-245-218.compute-1.amazonaws.com/api/appointments/${appointmentId}/attend`, {
         summary
       }, {
         headers: {

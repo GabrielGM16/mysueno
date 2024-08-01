@@ -14,7 +14,7 @@ function Recommendations() {
       const userId = localStorage.getItem('userId');
       const token = localStorage.getItem('token');
       try {
-        const response = await axios.get(`https://back-end-sueno.onrender.com/api/user/profile/${userId}`, {
+        const response = await axios.get(`http://ec2-54-208-245-218.compute-1.amazonaws.com/api/user/profile/${userId}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -29,7 +29,7 @@ function Recommendations() {
       const userId = localStorage.getItem('userId');
       const token = localStorage.getItem('token');
       try {
-        const response = await axios.get(`https://back-end-sueno.onrender.com/api/appointments/${userId}/recommendations`, {
+        const response = await axios.get(`http://ec2-54-208-245-218.compute-1.amazonaws.com/api/appointments/${userId}/recommendations`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -43,7 +43,7 @@ function Recommendations() {
     const fetchSpecialties = async () => {
       const token = localStorage.getItem('token');
       try {
-        const response = await axios.get('https://back-end-sueno.onrender.com/api/specialists/specialties', {
+        const response = await axios.get('http://ec2-54-208-245-218.compute-1.amazonaws.com/api/specialists/specialties', {
           headers: {
             Authorization: `Bearer ${token}`
           }

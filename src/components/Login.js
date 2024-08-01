@@ -20,13 +20,13 @@ const Login = () => {
     setError(null); // Clear previous errors
     try {
       if (step === 1) {
-        const response = await axios.post('https://back-end-sueno.onrender.com/api/auth/login', { email: formData.email, password: formData.password });
+        const response = await axios.post('http://ec2-54-208-245-218.compute-1.amazonaws.com/api/auth/login', { email: formData.email, password: formData.password });
         localStorage.setItem('email', formData.email); // Store email for the next step
         setFormData({ ...formData, password: '' }); // Clear password after the first step
         setStep(2);
       } else if (step === 2) {
         const email = localStorage.getItem('email');
-        const response = await axios.post('https://back-end-sueno.onrender.com/api/auth/verify-code', { email, code: formData.code });
+        const response = await axios.post('http://ec2-54-208-245-218.compute-1.amazonaws.com/api/auth/verify-code', { email, code: formData.code });
         const { token, role, userId } = response.data;
 
         localStorage.setItem('token', token);

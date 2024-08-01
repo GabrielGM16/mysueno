@@ -19,7 +19,7 @@ const ForgotPassword = () => {
     e.preventDefault();
     setError(''); // Clear previous errors
     try {
-      const response = await axios.post('https://back-end-sueno.onrender.com/api/auth/forgot-password', { email });
+      const response = await axios.post('http://ec2-54-208-245-218.compute-1.amazonaws.com/api/auth/forgot-password', { email });
       setMessage(response.data.message);
     } catch (error) {
       console.error('Error sending password reset email:', error);
