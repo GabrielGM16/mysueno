@@ -16,7 +16,7 @@ function DailyHabits() {
       const userId = localStorage.getItem('userId');
       const token = localStorage.getItem('token');
       try {
-        const response = await axios.get(`http://ec2-54-208-245-218.compute-1.amazonaws.com/api/user/profile/${userId}`, {
+        const response = await axios.get(`http://ec2-3-235-102-184.compute-1.amazonaws.com/api/user/profile/${userId}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -34,7 +34,7 @@ function DailyHabits() {
     const userId = localStorage.getItem('userId');
     const token = localStorage.getItem('token');
     try {
-      await axios.post('http://ec2-54-208-245-218.compute-1.amazonaws.com/api/habits', {
+      await axios.post('http://ec2-3-235-102-184.compute-1.amazonaws.com/api/habits', {
         userId,
         sleepDuration,
         mealTimes: mealTimes.split(','),

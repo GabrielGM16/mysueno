@@ -21,7 +21,7 @@ const ResetPassword = () => {
       return;
     }
     try {
-      const response = await axios.post('http://ec2-54-208-245-218.compute-1.amazonaws.com/api/auth/reset-password', { token, newPassword });
+      const response = await axios.post('http://ec2-3-235-102-184.compute-1.amazonaws.com/api/auth/reset-password', { token, newPassword });
       setMessage(response.data.message);
       setError('');
       navigate('/login');

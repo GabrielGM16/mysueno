@@ -22,7 +22,7 @@ const VerifyLoginCode = () => {
         throw new Error('Email not found in localStorage');
       }
 
-      const response = await axios.post('http://ec2-54-208-245-218.compute-1.amazonaws.com/api/auth/verify-code', { email, code: verificationCode });
+      const response = await axios.post('http://ec2-3-235-102-184.compute-1.amazonaws.com/api/auth/verify-code', { email, code: verificationCode });
       const { token, role, userId } = response.data;
 
       localStorage.setItem('token', token);

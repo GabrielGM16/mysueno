@@ -60,7 +60,7 @@ const Register = () => {
     }
 
     try {
-      const response = await axios.post('http://ec2-54-208-245-218.compute-1.amazonaws.com/api/auth/register', {
+      const response = await axios.post('http://ec2-3-235-102-184.compute-1.amazonaws.com/api/auth/register', {
         ...formData,
         captchaToken
       });

@@ -15,7 +15,7 @@ function SpecialistAppointments() {
       const userId = localStorage.getItem('userId');
       const token = localStorage.getItem('token');
       try {
-        const response = await axios.get(`http://ec2-54-208-245-218.compute-1.amazonaws.com/api/user/profile/${userId}`, {
+        const response = await axios.get(`http://ec2-3-235-102-184.compute-1.amazonaws.com/api/user/profile/${userId}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -31,7 +31,7 @@ function SpecialistAppointments() {
       const specialistId = localStorage.getItem('userId');
       const token = localStorage.getItem('token');
       try {
-        const response = await axios.get(`http://ec2-54-208-245-218.compute-1.amazonaws.com/api/appointments/${specialistId}/appointments`, {
+        const response = await axios.get(`http://ec2-3-235-102-184.compute-1.amazonaws.com/api/appointments/${specialistId}/appointments`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -49,7 +49,7 @@ function SpecialistAppointments() {
   const handleAttend = async (appointmentId) => {
     const token = localStorage.getItem('token');
     try {
-      await axios.patch(`http://ec2-54-208-245-218.compute-1.amazonaws.com/api/appointments/${appointmentId}/attend`, {
+      await axios.patch(`http://ec2-3-235-102-184.compute-1.amazonaws.com/api/appointments/${appointmentId}/attend`, {
         summary,
         specialty // Include specialty in the request
       }, {

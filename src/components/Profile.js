@@ -13,7 +13,7 @@ function Profile() {
     const token = localStorage.getItem('token');
 
     if (userId && token) {
-      axios.get(`http://ec2-54-208-245-218.compute-1.amazonaws.com/api/user/profile/${userId}`, {
+      axios.get(`http://ec2-3-235-102-184.compute-1.amazonaws.com/api/user/profile/${userId}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
